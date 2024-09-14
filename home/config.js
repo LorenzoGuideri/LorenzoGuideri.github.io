@@ -199,7 +199,7 @@ const CONFIG = {
       id: "2",
       links: [
         {
-          name: "SOW",
+          name: "Stack Overflow",
           link: "https://stackoverflow.com/",
         },
         {
