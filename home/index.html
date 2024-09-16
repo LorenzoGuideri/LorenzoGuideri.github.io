@@ -6,13 +6,13 @@
   <title>Home</title>
   <link rel=" shortcut icon" type="image/png" href="assets/icons/favicon.png" />
   <link rel="stylesheet" href="app.css" />
-  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body class="darktheme">
+  <script>
+    let FF_FOUC_FIX;
+  </script>
   <div class="container">
-    <!-- Clock and Greetings  -->
-
     <div class="timeBlock">
       <div class="clock">
         <div id="hour"></div>
@@ -21,8 +21,6 @@
       </div>
       <div id="greetings"></div>
     </div>
-
-    <!-- Date and Weather  -->
 
     <div class="weatherBlock">
       <div class="date">
@@ -34,7 +32,7 @@
           <img src="assets/icons/OneDark/unknown.png" />
         </div>
         <div class="weatherValue">
-          <p>- °<span class="g">c</span></p>
+          <p>- °<span class="darkfg">C</span></p>
         </div>
         <div class="weatherDescription">
           <p></p>
@@ -42,27 +40,210 @@
       </div>
     </div>
 
-    <div class="linksBlock" id="linksBlock">
-      <div class="linksBlockLeft" id="linksBlockLeft"></div>
-      <div class="linksBlockRight" id="linksBlockRight"></div>
+    <div class="linksBlock reduceGap" id="linksBlock">
+      <div class="linksBlockLeft" id="linksBlockLeft">
+        <div class="listsContainer" id="lists_1">
+          <div class="card list list__1" id="list_1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="briefcase-business" class="lucide lucide-briefcase-business listIcon"
+              icon-name="briefcase-business">
+              <path d="M12 12h.01"></path>
+              <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path>
+              <path d="M22 13a18.15 18.15 0 0 1-20 0"></path>
+              <rect width="20" height="14" x="2" y="6" rx="2"></rect>
+            </svg>
+            <a target="" href="https://dec-energy.ch/admin/" class="listItem">DEC Admin</a>
+            <a target="" href="https://github.com/orgs/Decentralized-Energy-Corporation/repositories"
+              class="listItem">Repo</a>
+            <a target="" href="https://www.notion.so/Lollo-e288ccf19ba9438fb69d08b7d0e54025/"
+              class="listItem">Notion</a>
+            <a target="" href="https://docs.djangoproject.com/" class="listItem">Django Docs</a>
+          </div>
+
+          <div class="card list list__2" id="list_2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="tv-minimal-play" class="lucide lucide-tv-minimal-play listIcon" icon-name="tv-minimal-play">
+              <path
+                d="M10 7.75a.75.75 0 0 1 1.142-.638l3.664 2.249a.75.75 0 0 1 0 1.278l-3.664 2.25a.75.75 0 0 1-1.142-.64z">
+              </path>
+              <path d="M7 21h10"></path>
+              <rect width="20" height="14" x="2" y="3" rx="2"></rect>
+            </svg>
+            <a target="" href="https://www.youtube.com/" class="listItem">YouTube</a>
+            <a target="" href="https://www.netflix.com/" class="listItem">Netflix</a>
+            <a target="" href="https://open.spotify.com/" class="listItem">Spotify</a>
+            <a target="" href="https://1337x.to/" class="listItem">1337x</a>
+          </div>
+        </div>
+      </div>
+      <div class="linksBlockRight" id="linksBlockRight">
+        <div class="listsContainer" id="lists_2">
+          <div class="card list list__1" id="list_1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="message-circle" class="lucide lucide-message-circle listIcon" icon-name="message-circle">
+              <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+            </svg>
+            <a target="" href="https://mail.proton.me/u/0/inbox/" class="listItem">Proton</a>
+            <a target="" href="https://outlook.office.com/mail/" class="listItem">Outlook</a>
+            <a target="" href="https://www.instagram.com/" class="listItem">Instagram</a>
+            <a target="" href="https://www.linkedin.com/feed/" class="listItem">Linkedin</a>
+          </div>
+
+          <div class="card list list__2" id="list_2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              data-lucide="file-code-2" class="lucide lucide-file-code-2 listIcon" icon-name="file-code-2">
+              <path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"></path>
+              <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+              <path d="m5 12-3 3 3 3"></path>
+              <path d="m9 18 3-3-3-3"></path>
+            </svg>
+            <a target="" href="https://stackoverflow.com/" class="listItem">Stack Overflow</a>
+            <a target="" href="https://leetcode.com/problemset/" class="listItem">LeetCode</a>
+            <a target="" href="https://www.icorsi.ch/my/" class="listItem">iCorsi</a>
+            <a target="" href="https://chatgpt.com/" class="listItem">GPT</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Config  -->
-  <script src="config.js"></script>
+  <script>
+    window.onload = clock();
+    function clock() {
+      const monthNames = [
+        "Gen",
+        "Feb",
+        "Mar",
+        "Apr",
+        "Mag",
+        "Giu",
+        "Lug",
+        "Ago",
+        "Set",
+        "Ott",
+        "Nov",
+        "Dic",
+      ];
 
-  <!-- Scripts  -->
-  <script src="assets/js/layout.js"></script>
-  <script src="assets/js/theme.js"></script>
-  <script src="assets/js/time.js"></script>
-  <script src="assets/js/greeting.js"></script>
-  <script src="assets/js/weather.js"></script>
+      var d = new Date();
+      var mm = monthNames[d.getMonth()];
+      var dd = d.getDate();
+      var min = (mins = ("0" + d.getMinutes()).slice(-2));
+      var hh = d.getHours();
+      document.getElementById("hour").innerText = hh;
+      document.getElementById("separator").innerText = ":";
+      document.getElementById("minutes").innerText = min;
+      document.getElementById("month").innerText = mm;
+      document.getElementById("day").innerText = dd;
+      setTimeout(clock, 1000);
 
-  <!-- Generators  -->
-  <script src="assets/js/buttons.js"></script>
-  <script src="assets/js/lists.js"></script>
+      if (hh >= 23 || hh < 6) {
+        document.getElementById("greetings").innerText = "Sono stanco, capo";
+      } else if (hh >= 6 && hh < 12) {
+        document.getElementById("greetings").innerText = "Buongiorno, boss!";
+      } else if (hh >= 12 && hh < 17) {
+        document.getElementById("greetings").innerText =
+          "Buon pomeriggio, boss!";
+      } else {
+        document.getElementById("greetings").innerText = "Buonasera, capo!";
+      }
+    }
+
+    const iconElement = document.querySelector(".weatherIcon");
+    const tempElement = document.querySelector(".weatherValue p");
+    const descElement = document.querySelector(".weatherDescription p");
+
+    var weather = {};
+    weather.temperature = {
+      unit: "celsius",
+    };
+    const KELVIN = 273.15;
+    const key = "8b05d62206f459e1d298cbe5844d7d87";
+    setPosition();
+
+    function setPosition(position) {
+      cachedLatitude = localStorage.getItem("latitude");
+      cachedLongitude = localStorage.getItem("longitude");
+      if (cachedLatitude === null || cachedLongitude === null) {
+        [cachedLatitude, cachedLongitude] = getPosition();
+      }
+      getWeather(cachedLatitude, cachedLongitude);
+      getPosition();
+
+      setTimeout(setPosition, 10000);
+    }
+
+    function getPosition() {
+      if (!navigator.geolocation) {
+        console.error("Geolocation not available");
+        return ["46.010", "8.960"];
+      } else {
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            console.log("stored", pos.coords.latitude);
+            localStorage.setItem("latitude", pos.coords.latitude.toFixed(3));
+            localStorage.setItem(
+              "longitude",
+              pos.coords.longitude.toFixed(3),
+            );
+
+            return [
+              pos.coords.latitude.toFixed(3),
+              pos.coords.longitude.toFixed(3),
+            ];
+          },
+          (err) => {
+            console.error(err);
+
+            return ["46.010", "8.960"];
+          },
+        );
+      }
+    }
+
+    function getWeather(latitude, longitude) {
+      let cachedWeather = localStorage.getItem("weather");
+      if (cachedWeather != null) {
+        weather = JSON.parse(cachedWeather);
+        displayWeather();
+      }
+      fetchWeatherAndDisplay(latitude, longitude);
+    }
+
+    function fetchWeatherAndDisplay(latitude, longitude) {
+      let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&lang=it&appid=${key}`;
+      fetch(api)
+        .then(function (response) {
+          let data = response.json();
+          return data;
+        })
+        .then(function (data) {
+          let celsius = Math.floor(data.main.temp - KELVIN);
+          weather.temperature.value = celsius;
+          weather.description = data.weather[0].description;
+          weather.iconId = data.weather[0].icon;
+        })
+        .then(function () {
+          localStorage.setItem("weather", JSON.stringify(weather));
+          displayWeather();
+        });
+    }
+
+    function displayWeather() {
+      iconElement.innerHTML = `<img src="assets/icons/OneDark/${weather.iconId}.png"/>`;
+      tempElement.innerHTML = `${weather.temperature.value.toFixed(
+        0,
+      )}°<span class="darkfg">C</span>`;
+      descElement.innerHTML = weather.description;
+    }
+  </script>
 
   <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
   <script>
     lucide.createIcons();
   </script>
